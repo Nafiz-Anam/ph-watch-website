@@ -1,0 +1,88 @@
+.shop-page {
+    padding-bottom: 80px;
+}
+.shop-page .banner {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://i.ibb.co/VHvbGnR/bg01.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.shop-page .banner h1 {
+    font-size: 50px;
+    font-weight: 800;
+    color: white;
+}
+
+.timer {
+    background-color: #3282b8;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 25px 0;
+    border-radius: 5px;
+    margin: 80px 0;
+}
+
+.timer .card {
+    background-color: red;
+    color: white;
+    padding: 5px;
+}
+
+.timer h2 {
+    font-weight: 800;
+    color: white;
+    margin: 15px 0;
+}
+
+.btn-shop {
+    background-color: white;
+    color: #3282b8;
+    padding: 15px 25px;
+}
+
+.sidebar form button {
+    background-color: #3282b8;
+    color: white;
+    padding: 17px;
+    margin-top: -2px;
+    border-radius: 0 15px 15px 0;
+}
+
+.sidebar form input {
+    height: 60px;
+    padding: 10px;
+    border-radius: 0!important;
+    border: 2px solid #3282b8;
+    border-radius: 15px 0 0 15px!important;
+}
+
+.sidebar{
+    padding: 80px 10px;
+}
+
+.sidebar ul{
+    list-style: none;
+}
+
+.shop-all{
+    padding: 80px 30px;
+}
+
+.categories li{
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 0;
+}
+
+.categories li::before, .custom ul li::before{
+    content: ">> ";
+    color: #3282b8;
+    font-weight: 900;
+    font-size: 20px;
+}

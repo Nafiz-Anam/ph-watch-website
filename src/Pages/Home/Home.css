@@ -1,0 +1,107 @@
+.home-page {
+    padding-bottom: 80px;
+}
+
+.home-page .banner img {
+    width: 80%;
+}
+.home-page .banner {
+    background-image: url("https://i.ibb.co/VHvbGnR/bg01.jpg");
+    background-position: cover;
+    background-position: center;
+    color: white;
+    background-repeat: no-repeat;
+}
+
+.banner-content {
+    height: 750px;
+}
+
+.home-text h1{
+    font-size: 80px;
+    font-weight: 800;
+}
+
+.latest h1,
+.style h1,
+.limited h1,
+.category h1 {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.latest {
+    padding: 80px 0;
+    flex-direction: column;
+}
+
+.feature-watch {
+    width: 80%;
+}
+.reviews .title {
+    font-size: 50px;
+    font-weight: 700;
+    padding-bottom: 30px;
+}
+.home-text p {
+    font-size: 17px;
+    font-weight: 500;
+    padding: 10px 0;
+}
+.btn-home {
+    background-color: #3282b8;
+    color: white;
+    padding: 15px 25px;
+    margin-top: 20px;
+}
+
+.style-hrading{
+    text-align: end;
+}
+
+.btn-cat{
+    background-color: #3282b8;
+    padding: 15px 30px;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+}
+.style img,
+.limited img {
+    width: 100%;
+}
+
+.cat-1 {
+    background-image: url("https://i.ibb.co/MfpkJZF/portrait-of-a-brutal-man-in-sunglasses-and-watch-outdoors-1.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.cat-2 {
+    background-image: url("https://i.ibb.co/hB44rjj/runner-looking-at-sport-watch-1.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.cat-3 {
+    background-image: url("https://i.ibb.co/gR5qMwm/portrait-of-a-sports-male-in-the-home-1-1.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cat-card {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 25px;
+    color: white;
+}
+
+.cat-card h3{
+    font-size: 36px;
+    padding: 25px 0;
+}

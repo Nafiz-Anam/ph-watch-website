@@ -1,0 +1,10 @@
+.make-admin-form form {
+    width: 500px;
+    padding-top: 50px;
+}
+
+.btn-admin {
+    background-color: #3282b8;
+    color: white;
+    width: 50%!important;
+}

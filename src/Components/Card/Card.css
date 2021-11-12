@@ -1,0 +1,18 @@
+.all-card .title{
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px 0;
+    
+}
+.all-card{
+    border: none;
+}
+
+.price{
+    font-size: 20px;
+    font-weight: 800;
+}
+.btn-details{
+    background-color: #3282B8;
+    color: white;
+}

@@ -1,0 +1,38 @@
+.single-watch {
+    padding: 80px 0;
+    align-items: center;
+}
+.single-watch img {
+    width: 80%;
+}
+
+.watchdata p {
+    color: gray;
+    font-size: 15px;
+    padding: 25px 0;
+}
+.watchdata h1 {
+    font-size: 36px;
+    font-weight: 800;
+    padding: 25px 0;
+}
+
+.btn-buy {
+    background-color: #3282b8;
+    color: white;
+    padding: 10px 30px;
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+.details h1{
+    padding-bottom: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.details{
+    font-size: 18px;
+    line-height: 25px;
+    padding-bottom: 80px;
+}

@@ -1,0 +1,79 @@
+.contact-page {
+    padding-bottom: 80px;
+}
+
+.contact-page .banner {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://i.ibb.co/VHvbGnR/bg01.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.contact-page .banner h1 {
+    font-size: 50px;
+    font-weight: 800;
+    color: white;
+}
+.contact-page .title {
+    padding-bottom: 80px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+.contact-form form label {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 17px;
+    font-weight: 500;
+}
+.contact-form form input {
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    padding: 15px;
+}
+.contact-form form textarea {
+    height: 100px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    padding: 15px;
+}
+
+.btn-contact {
+    width: 30%;
+    background-color: #3282B8;
+    color: white;
+    margin: 20px 0;
+    padding: 12px 30px;
+}
+
+.contacts{
+    padding: 80px 0;
+}
+
+.contacts .card{
+    padding: 25px;
+}
+
+.contacts .card{
+    border: none;
+    border-bottom: 5px solid #3282B8;
+}
+
+.contacts i{
+    font-size: 50px;
+    color: #3282B8;
+}
+.contacts h3{
+    font-size: 30px;
+    padding: 20px 0;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.contacts p{
+    font-size: 17px;
+}

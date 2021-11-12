@@ -1,0 +1,147 @@
+.about-page .banner {
+    height: 500px;
+    background-image: url('https://i.ibb.co/VHvbGnR/bg01.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-page .banner h1 {
+    font-size: 50px;
+    font-weight: 800;
+    color: white;
+}
+
+.about-text,
+.custom-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about {
+    padding: 80px 0;
+}
+
+.about-page .about img {
+    width: 80%;
+}
+
+.about-text ul, .custom ul{
+    list-style: none;
+}
+.about-text ul li, .custom ul li{
+    padding: 5px 0;
+    font-weight: 600;
+}
+.about-text ul li::before, .custom ul li::before{
+    content: ">> ";
+    color: #3282b8;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.custom button{
+    background-color: #3282b8;
+    width: 30%;
+    color: white;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+.btn-insta{
+    background-color: white;
+    color: #3282b8;
+    font-size: 17px;
+    padding: 15px 25px;
+    margin: 15px;
+}
+.about-page .about h1,
+.custom h1,
+.social h1 {
+    font-size: 60px;
+    font-weight: 800;
+}
+.about-page .about p,
+.custom p {
+    font-size: 17px;
+    margin: 20px 0;
+}
+.team {
+    padding: 80px 0;
+}
+.team .card {
+    border: none;
+    text-align: center;
+}
+.team .card .card-footer {
+    border: none;
+    display: flex;
+    justify-content: center;
+    margin-top: -20px;
+    background-color: white;
+}
+.team .card .card-footer ul {
+    list-style: none;
+    display: flex;
+}
+.team .card .card-footer ul li{
+    padding: 10px;
+}
+.team .card .card-footer ul li i{
+    font-size: 25px;
+}
+.team h1 {
+    font-size: 50px;
+    font-weight: 800;
+    text-align: center;
+    padding-bottom: 50px;
+}
+.team .card img{
+    border-radius: 10px;
+    width: 70%;
+}
+
+.quote {
+    height: 400px;
+    background-image: url('https://i.ibb.co/sF7ynCJ/Untitled-design.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.quote h1 {
+    font-size: 60px;
+    font-weight: 900;
+    color: white;
+    width: 60%;
+    text-align: center;
+}
+
+.custom {
+    padding: 80px 0;
+}
+
+.custom img {
+    width: 100%;
+}
+
+.social {
+    height: 400px;
+    color: white;
+    background-image: url('https://i.ibb.co/ch5VRm1/Untitled-design-1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery img {
+    width: 100%;
+}

@@ -1,0 +1,49 @@
+header {
+    background-color: #1b262c;
+}
+nav {
+    padding: 20px 0;
+}
+
+.navbar-nav{
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 15px;
+}
+nav .hover-link:hover {
+    background-color: #3282b8;
+    color: white;
+}
+nav .hover-link.active {
+    background-color: #3282b8;
+    color: white;
+}
+.user-name{
+    color: #3282b8;
+    font-weight: 700;
+    font-size: 18px;
+}
+.user-name:hover{
+    color: #3282b8;
+}
+.logo {
+    width: 70%;
+}
+
+.login-btn {
+    background-color: #3282b8;
+    color: white !important;
+}
+.login-btn a {
+    color: white !important;
+}
+
+.login-btn:hover {
+    background-color: #1a5e8b;
+}

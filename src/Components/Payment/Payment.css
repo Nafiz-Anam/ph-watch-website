@@ -1,0 +1,53 @@
+.payment-page form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.payment-page form input {
+    height: 50px;
+    width: 400px;
+    padding: 15px;
+    border: 1px solid #7a7a7a75;
+    margin: 10px;
+    /* border-radius: 50px; */
+}
+
+.payment-page h1 {
+    font-weight: 600;
+    padding-bottom: 30px;
+}
+
+.paypal {
+    padding: 18px 30px;
+    width: 20%;
+    border: 2px solid #3282b8;
+}
+.bkash {
+    padding: 13px 30px;
+    width: 20%;
+    border: 2px solid #e2136e;
+}
+.nogod {
+    padding: 15px 30px;
+    width: 20%;
+    border: 2px solid #F7941D;
+}
+.nogod img {
+    width: 70% !important;
+}
+
+.pay-buttons img {
+    width: 100%;
+}
+
+.btn-confirm {
+    background-color: #3282b8;
+}
+.btn-confirm:hover {
+    color: white;
+}
+.credit-cards{
+    width: 20%;
+}
