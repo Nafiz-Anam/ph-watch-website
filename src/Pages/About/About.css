@@ -145,3 +145,24 @@
 .gallery img {
     width: 100%;
 }
+
+@media (max-width: 767.98px) {
+    .about-page .about img{
+        width: 100%;
+    }
+    .about-page .about h1, .custom h1, .social h1{
+        font-size: 40px;
+    }
+    .team{
+        padding: 0!important;
+    }
+    .custom-img{
+        margin-top: 50px;
+    }
+    .social{
+        height: 100%!important;
+        padding: 80px 0;
+        text-align: center;
+        
+    }
+}

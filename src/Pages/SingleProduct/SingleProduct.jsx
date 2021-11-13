@@ -7,16 +7,18 @@ import useAuth from "../../Firebase/Hooks/useAuth";
 const SingleProduct = () => {
     const { id } = useParams();
     const [watch, setWatch] = useState({});
-    const { setSaveDetails } = useAuth();
+    const { setSaveDetails, setIsLoading } = useAuth();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/shop/${id}`)
+        setIsLoading(true);
+        fetch(`https://serene-shelf-88269.herokuapp.com/shop/${id}`)
             .then((res) => res.json())
             .then((data) => {
                 // console.log(data);
                 setWatch(data);
-            });
-    }, [id]);
+            })
+            .finally(setIsLoading(false));
+    }, []);
 
     const history = useHistory();
 
@@ -30,7 +32,7 @@ const SingleProduct = () => {
         <div className="single-details">
             {/* data loads here  */}
             <div className="container">
-                <div class="row single-watch">
+                <div className="row single-watch">
                     <div className="col-lg-6">
                         <img src={watch?.image} alt="" />
                     </div>

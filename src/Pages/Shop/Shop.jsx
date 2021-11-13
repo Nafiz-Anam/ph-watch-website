@@ -6,7 +6,7 @@ const Shop = () => {
     // fetching data  here
     const [allWatches, setAllWatches] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:5000/shop")
+        fetch("https://serene-shelf-88269.herokuapp.com/shop")
             .then((res) => res.json())
             .then((data) => setAllWatches(data));
     }, []);
@@ -21,9 +21,14 @@ const Shop = () => {
                         <div className="col-lg-9 shop-all">
                             <div className="watches">
                                 <div className="row">
-                                    {allWatches.map((watch) => (
-                                        <Card Watch={watch} key={watch._id} />
-                                    )).reverse()}
+                                    {allWatches
+                                        .map((watch) => (
+                                            <Card
+                                                Watch={watch}
+                                                key={watch._id}
+                                            />
+                                        ))
+                                        .reverse()}
                                 </div>
                             </div>
                         </div>
@@ -35,7 +40,7 @@ const Shop = () => {
                                         type="text"
                                     />
                                     <button className="btn btn-search">
-                                        <i class="fas fa-search"></i>
+                                        <i className="fas fa-search"></i>
                                     </button>
                                 </form>
                             </div>
@@ -71,8 +76,8 @@ const Shop = () => {
                                     Shop Now
                                 </button>
                             </div>
-                            <h2 className='py-3'>Categories</h2>
-                            <ul className='categories'>
+                            <h2 className="py-3">Categories</h2>
+                            <ul className="categories">
                                 <li>Casual Watch</li>
                                 <li>Sport Watch</li>
                                 <li>Fashion Watch</li>

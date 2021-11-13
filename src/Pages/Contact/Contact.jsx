@@ -15,21 +15,21 @@ const Contact = () => {
                     <div className="row text-center">
                         <div className="col-lg-4">
                             <div className="card shadow">
-                                <i class="fas fa-map-marked-alt"></i>
+                                <i className="fas fa-map-marked-alt"></i>
                                 <h3>our office</h3>
                                 <p>Madiun East Java Indonesia</p>
                             </div>
                         </div>
                         <div className="col-lg-4">
                             <div className="card shadow">
-                                <i class="fas fa-envelope"></i>
+                                <i className="fas fa-envelope"></i>
                                 <h3>our email</h3>
                                 <p>support@arloji.com</p>
                             </div>
                         </div>
                         <div className="col-lg-4">
                             <div className="card shadow">
-                                <i class="fas fa-phone-square-alt"></i>
+                                <i className="fas fa-phone-square-alt"></i>
                                 <h3>our phone</h3>
                                 <p>0456 524 222</p>
                             </div>
@@ -42,9 +42,6 @@ const Contact = () => {
                             <iframe
                                 title="map-khulna"
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14710.423366238587!2d89.55679903664183!3d22.817064639553834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ff90193c82d64b%3A0xd48ce5c464563d6d!2sKhulna%20City%2C%20Khulna!5e0!3m2!1sen!2sbd!4v1636619300285!5m2!1sen!2sbd"
-                                width="600"
-                                height="450"
-                                allowfullscreen=""
                                 loading="lazy"
                             ></iframe>
                         </div>
@@ -61,7 +58,9 @@ const Contact = () => {
                                 <button
                                     className="btn btn-contact"
                                     type="submit"
-                                >Submit</button>
+                                >
+                                    Submit
+                                </button>
                             </form>
                         </div>
                     </div>

@@ -12,7 +12,7 @@ const Checkout = () => {
     const history = useHistory();
     const onSubmit = (data) => {
         // console.log(data);
-        fetch("http://localhost:5000/orders", {
+        fetch("https://serene-shelf-88269.herokuapp.com/orders", {
             method: "POST",
             headers: {
                 "content-type": "application/json",
@@ -52,7 +52,6 @@ const Checkout = () => {
                         />
                         <input
                             type="text"
-                            
                             placeholder="Watch Name"
                             defaultValue={saveDetails?.watchname}
                             {...register("watchname")}

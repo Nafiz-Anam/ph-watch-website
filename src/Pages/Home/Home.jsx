@@ -6,17 +6,17 @@ import ReviewCard from "../../Components/ReviewCard/ReviewCard";
 const Home = () => {
     const [allWatches, setAllWatches] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:5000/shop")
+        fetch("https://serene-shelf-88269.herokuapp.com/shop")
             .then((res) => res.json())
             .then((data) => setAllWatches(data));
     }, []);
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:5000/review")
+        fetch("https://serene-shelf-88269.herokuapp.com/review")
             .then((res) => res.json())
             .then((data) => {
                 setReviews(data);
-                console.log(data);
+                // console.log(data);
             });
     }, []);
     return (
@@ -143,7 +143,7 @@ const Home = () => {
                                 alt=""
                             />
                         </div>
-                        <div className="col-lg-6">
+                        <div className="col-lg-6 custom-text">
                             <h1>CUSTOM PRODUCT TO CUSTOMIZE YOUR LOOK</h1>
                             <p>
                                 Design your quality custom mechanical watch.

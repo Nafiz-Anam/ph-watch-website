@@ -11,17 +11,15 @@ const Header = () => {
             <div className="navigation container">
                 <nav className="navbar navbar-expand-lg">
                     <div className="container-fluid">
-                        <span className="navbar-brand">
-                            <NavLink to="/">
-                                <img
-                                    className="logo"
-                                    src="https://i.ibb.co/wrknQ0N/Group-4-1.png"
-                                    alt="logo"
-                                />
-                            </NavLink>
-                        </span>
+                        <NavLink className='nav-logo' to="/">
+                            <img
+                                className="logo"
+                                src="https://i.ibb.co/wrknQ0N/Group-4-1.png"
+                                alt="logo"
+                            />
+                        </NavLink>
                         <button
-                            className="navbar-toggler"
+                            className="navbar-toggler btn"
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target="#navbarSupportedContent"
@@ -29,7 +27,7 @@ const Header = () => {
                             aria-expanded="false"
                             aria-label="Toggle navigation"
                         >
-                            <span className="navbar-toggler-icon"></span>
+                            <i className="fas fa-bars toggle-bar"></i>
                         </button>
                         <div
                             className="collapse navbar-collapse"

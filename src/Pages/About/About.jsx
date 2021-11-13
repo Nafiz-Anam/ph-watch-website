@@ -69,13 +69,13 @@ const About = () => {
                                 <div className="card-footer">
                                     <ul>
                                         <li>
-                                            <i class="fab fa-facebook"></i>
+                                            <i className="fab fa-facebook"></i>
                                         </li>
                                         <li>
-                                            <i class="fab fa-twitter"></i>
+                                            <i className="fab fa-twitter"></i>
                                         </li>
                                         <li>
-                                            <i class="fab fa-linkedin"></i>
+                                            <i className="fab fa-linkedin"></i>
                                         </li>
                                     </ul>
                                 </div>
@@ -99,13 +99,13 @@ const About = () => {
                                 <div className="card-footer">
                                     <ul>
                                         <li>
-                                            <i class="fab fa-facebook"></i>
+                                            <i className="fab fa-facebook"></i>
                                         </li>
                                         <li>
-                                            <i class="fab fa-twitter"></i>
+                                            <i className="fab fa-twitter"></i>
                                         </li>
                                         <li>
-                                            <i class="fab fa-linkedin"></i>
+                                            <i className="fab fa-linkedin"></i>
                                         </li>
                                     </ul>
                                 </div>
@@ -129,13 +129,13 @@ const About = () => {
                                 <div className="card-footer">
                                     <ul>
                                         <li>
-                                            <i class="fab fa-facebook"></i>
+                                            <i className="fab fa-facebook"></i>
                                         </li>
                                         <li>
-                                            <i class="fab fa-twitter"></i>
+                                            <i className="fab fa-twitter"></i>
                                         </li>
                                         <li>
-                                            <i class="fab fa-linkedin"></i>
+                                            <i className="fab fa-linkedin"></i>
                                         </li>
                                     </ul>
                                 </div>
@@ -160,7 +160,7 @@ const About = () => {
                             </ul>
                             <button className="btn">build button</button>
                         </div>
-                        <div className="col-lg-6">
+                        <div className="col-lg-6 custom-img">
                             <img
                                 src="https://i.ibb.co/N6r0Px3/close-up-of-old-clock-watch-mechanism-retro-clockwork-watch-with-gearwheels-gears-vintage-movement-1.jpg"
                                 alt=""

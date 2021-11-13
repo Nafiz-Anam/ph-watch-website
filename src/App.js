@@ -16,7 +16,6 @@ import SingleProduct from "./Pages/SingleProduct/SingleProduct";
 import Footer from "./Components/Footer/Footer";
 import UserDashboard from "./Pages/UserDashboard/UserDashboard";
 
-
 function App() {
     return (
         <div className="App">

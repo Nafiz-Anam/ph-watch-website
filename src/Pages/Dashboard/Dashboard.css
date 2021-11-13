@@ -12,7 +12,7 @@
     color: blue;
 }
 .menu-side .nav-link.active {
-    color: blue!important;
+    color: blue !important;
 }
 
 .menu-side .nav-link {
@@ -68,59 +68,68 @@
     margin: 10px 0 10px 0;
 }
 
-.btn-add{
-    background-color: #3282B8;
+.btn-add {
+    background-color: #3282b8;
     color: white;
-    width: 20%!important;
+    width: 20% !important;
 }
 
-.menu-side .nav-link.active{
-    color: #3282B8!important;
+.menu-side .nav-link.active {
+    color: #3282b8 !important;
 }
 
-.submit-btn .btn-event{
+.submit-btn .btn-event {
     width: 200px;
-    background-color: #3F90FC;
+    background-color: #3f90fc;
     color: white;
     font-size: 17px;
     border-radius: 50px;
     border: none;
 }
 
-.add-event h1, .booking-list h1{
+.add-event h1,
+.booking-list h1 {
     font-size: 30px;
     font-weight: 600;
     padding-bottom: 25px;
 }
-.mobile-booking{
+.mobile-booking {
     display: none;
 }
-@media (max-width: 575.98px) { 
-    .admin-panel{
+@media (max-width: 575.98px) {
+    .admin-panel {
         flex-direction: column;
     }
-.admin-page{
-    padding: 20px 0;
-}
-    .menu-side{
+    .admin-page {
+        padding: 20px 0;
+    }
+    .menu-side {
         width: 100%;
     }
-    .add-event{
+    .btn-add{
+        width: 100%!important;
+        margin-bottom: 40px!important;
+    }
+    .make-admin-form form{
+        width: 100%!important;
+    }
+    .add-event {
         padding-top: 30px;
     }
-    .content-side{
+    .content-side {
         width: 100%;
     }
-    .add-form{
+    .add-form {
         flex-direction: column;
     }
-    .event form input, .event form textarea{
+    .event form input,
+    .event form textarea {
         width: 100%;
     }
-    .booking-table{
+    .booking-table {
         display: none;
     }
-    .mobile-booking{
-    display: block;
-}
+    .mobile-booking {
+        display: block;
+    }
 }

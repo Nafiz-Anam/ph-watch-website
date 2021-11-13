@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 // import UserBookings from "../../Components/UserBookings/UserBookings";
 import "./UserDashboard.css";
 import useAuth from "../../Firebase/Hooks/useAuth";
-import Payment from '../../Components/Payment/Payment'
+import Payment from "../../Components/Payment/Payment";
 import Review from "../../Components/Review/Review";
 
 const UserDashboard = () => {
@@ -10,7 +10,7 @@ const UserDashboard = () => {
     // fetching specific data  here
     const [allOrders, setAllOrders] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:5000/orders")
+        fetch("https://serene-shelf-88269.herokuapp.com/orders")
             .then((res) => res.json())
             .then((data) => {
                 const specificOrder = data.filter(
@@ -24,7 +24,7 @@ const UserDashboard = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm("Are you sure, you want to cancel?");
         if (proceed) {
-            fetch(`http://localhost:5000/orders/${id}`, {
+            fetch(`https://serene-shelf-88269.herokuapp.com/orders/${id}`, {
                 method: "DELETE",
             })
                 .then((res) => res.json())
@@ -59,7 +59,7 @@ const UserDashboard = () => {
                             aria-controls="v-pills-home"
                             aria-selected="true"
                         >
-                            <i class="fas fa-shopping-cart"></i> All Orders
+                            <i className="fas fa-shopping-cart"></i> My Orders
                         </button>
                         <button
                             className="nav-link btn"
@@ -71,7 +71,7 @@ const UserDashboard = () => {
                             aria-controls="v-pills-profile"
                             aria-selected="false"
                         >
-                            <i class="fas fa-dollar-sign"></i> Make Payment
+                            <i className="fas fa-dollar-sign"></i> Make Payment
                         </button>
                         <button
                             className="nav-link btn"
@@ -83,7 +83,7 @@ const UserDashboard = () => {
                             aria-controls="v-pills-review"
                             aria-selected="false"
                         >
-                            <i class="fas fa-stars"></i> Leave a Review
+                            <i className="fas fa-stars"></i> Leave a Review
                         </button>
                     </div>
                     <div
@@ -108,7 +108,7 @@ const UserDashboard = () => {
                                                 {allOrders.map((order) => (
                                                     <div
                                                         key={order?._id}
-                                                        className="card m-4"
+                                                        className="card m-4 text-center"
                                                     >
                                                         <img
                                                             src={order?.image}
@@ -118,29 +118,17 @@ const UserDashboard = () => {
                                                         <div className="card-body">
                                                             <h5 className="card-title">
                                                                 {
-                                                                    order?.hotelname
+                                                                    order?.watchname
                                                                 }
                                                             </h5>
-                                                            <p className="card-text">
-                                                                Booked By :{" "}
-                                                                <b>
-                                                                    {
-                                                                        order?.name
-                                                                    }
-                                                                </b>
-                                                            </p>
-                                                            <p className="card-text">
-                                                                Email :{" "}
-                                                                <b>
-                                                                    {
-                                                                        order?.email
-                                                                    }
-                                                                </b>
-                                                            </p>
-                                                            <p className="card-text">
+                                                            <h5 className="card-text">
                                                                 Status :{" "}
-                                                                {order?.status}
-                                                            </p>
+                                                                <b>
+                                                                    {
+                                                                        order?.status
+                                                                    }
+                                                                </b>
+                                                            </h5>
                                                             <div className="buttons mt-3">
                                                                 <button
                                                                     onClick={() => {

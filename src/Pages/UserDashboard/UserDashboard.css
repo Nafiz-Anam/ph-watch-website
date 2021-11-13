@@ -22,3 +22,22 @@
 .booking-list table tbody td {
     padding: 15px;
 }
+
+@media (max-width: 767.98px){
+    .menu-side{
+        align-items: center;
+        padding-bottom: 50px;
+    }
+    .pay-buttons button{
+        width: 50%;
+    }
+    .card-imgs img{
+        width: 60%;
+    }
+    .payment-page form{
+        padding: 25px;
+    }
+    .payment-page form input{
+        width: 100%!important;
+    }
+}

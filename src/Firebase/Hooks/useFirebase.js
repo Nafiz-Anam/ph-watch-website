@@ -104,7 +104,7 @@ const useFirebase = () => {
         signInWithEmailAndPassword(auth, email, password)
             .then((result) => {
                 // console.log(result);
-                
+
                 setUser(result.user);
                 const redirect_uri = location?.state?.from || "/";
                 history.push(redirect_uri);
@@ -137,14 +137,14 @@ const useFirebase = () => {
     };
     // checking admin
     useEffect(() => {
-        fetch(`http://localhost:5000/users/${user.email}`)
+        fetch(`https://serene-shelf-88269.herokuapp.com/users/${user.email}`)
             .then((res) => res.json())
             .then((data) => setAdmin(data.admin));
     }, [user.email]);
     // save users to my database
     const saveUser = (email, displayName, method) => {
         const user = { email, displayName };
-        fetch("http://localhost:5000/users", {
+        fetch("https://serene-shelf-88269.herokuapp.com/users", {
             method: method,
             headers: {
                 "content-type": "application/json",
@@ -167,6 +167,7 @@ const useFirebase = () => {
         saveDetails,
         isLoading,
         createUser,
+        setIsLoading,
     };
 };
 

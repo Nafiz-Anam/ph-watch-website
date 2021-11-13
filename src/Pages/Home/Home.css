@@ -17,7 +17,7 @@
     height: 750px;
 }
 
-.home-text h1{
+.home-text h1 {
     font-size: 80px;
     font-weight: 800;
 }
@@ -55,11 +55,11 @@
     margin-top: 20px;
 }
 
-.style-hrading{
+.style-hrading {
     text-align: end;
 }
 
-.btn-cat{
+.btn-cat {
     background-color: #3282b8;
     padding: 15px 30px;
     color: white;
@@ -99,9 +99,48 @@
     text-align: center;
     padding: 25px;
     color: white;
+    margin: 25px;
 }
 
-.cat-card h3{
+.cat-card h3 {
     font-size: 36px;
     padding: 25px 0;
+}
+
+@media (max-width: 767.98px) {
+    .banner {
+        padding: 80px 0;
+    }
+    .home-text h1 {
+        font-size: 40px;
+        padding-bottom: 30px;
+    }
+    .home-page .banner img {
+        width: 100%;
+        padding-top: 30px;
+    }
+    .latest h1,
+    .style h1,
+    .limited h1,
+    .category h1 {
+        font-size: 40px;
+        font-weight: 700;
+    }
+    .quote {
+        height: 100%!important;
+        padding: 50px 0;
+    }
+    .quote h1{
+        font-size: 50px!important;
+        width: 80%!important;
+    }
+    .custom{
+        padding: 0!important;
+    }
+    .custom-text{
+        margin-top: 30px;
+    }
+    .custom button{
+        width: 50%!important;
+    }
 }

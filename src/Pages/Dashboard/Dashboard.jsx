@@ -2,13 +2,14 @@ import React, { useEffect, useState } from "react";
 import "./Dashboard.css";
 import { useForm } from "react-hook-form";
 import MakeAdmin from "../../Components/MakeAdmin/MakeAdmin";
+import ManageProducts from "../../Components/ManageProducts/ManageProducts";
 
 const Dashboard = () => {
     const { register, handleSubmit, reset } = useForm();
     const [allOrders, setAllOrders] = useState([]);
     const onSubmit = (data) => {
         console.log(data);
-        fetch("http://localhost:5000/shop", {
+        fetch("https://serene-shelf-88269.herokuapp.com/shop", {
             method: "POST",
             headers: {
                 "content-type": "application/json",
@@ -27,7 +28,7 @@ const Dashboard = () => {
     // fetching data  here
     // const [allBookings, setAllBookings] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:5000/orders")
+        fetch("https://serene-shelf-88269.herokuapp.com/orders")
             .then((res) => res.json())
             .then((data) => {
                 setAllOrders(data);
@@ -38,7 +39,7 @@ const Dashboard = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm("Are you sure, you want to cancel?");
         if (proceed) {
-            fetch(`http://localhost:5000/orders/${id}`, {
+            fetch(`https://serene-shelf-88269.herokuapp.com/orders/${id}`, {
                 method: "DELETE",
             })
                 .then((res) => res.json())
@@ -57,7 +58,7 @@ const Dashboard = () => {
     const [order, setOrder] = useState({});
     // update status
     const handleStatus = (id) => {
-        fetch(`http://localhost:5000/orders/${id}`)
+        fetch(`https://serene-shelf-88269.herokuapp.com/orders/${id}`)
             .then((res) => res.json())
             .then((data) => {
                 // console.log(data);
@@ -66,7 +67,7 @@ const Dashboard = () => {
         const updatedStatus = { ...order };
         updatedStatus.status = "Shipped";
         setOrder(updatedStatus);
-        fetch(`http://localhost:5000/orders/${id}`, {
+        fetch(`https://serene-shelf-88269.herokuapp.com/orders/${id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json",
@@ -76,8 +77,8 @@ const Dashboard = () => {
             .then((res) => res.json())
             .then((data) => {
                 if (data.modifiedCount > 0) {
-                    alert("Approved Successfully.");
-                    fetch("http://localhost:5000/orders")
+                    alert("Shipped Successfully.");
+                    fetch("https://serene-shelf-88269.herokuapp.com/orders")
                         .then((res) => res.json())
                         .then((data) => {
                             setAllOrders(data);
@@ -99,7 +100,7 @@ const Dashboard = () => {
                         aria-orientation="vertical"
                     >
                         <button
-                            className="nav-link active btn"
+                            className="nav-link active btn px-0"
                             id="v-pills-home-tab"
                             data-bs-toggle="pill"
                             data-bs-target="#v-pills-home"
@@ -108,10 +109,11 @@ const Dashboard = () => {
                             aria-controls="v-pills-home"
                             aria-selected="true"
                         >
-                            <i className="fas fa-shopping-cart"></i> All Orders
+                            <i className="fas fa-shopping-cart"></i> Manage
+                            Orders
                         </button>
                         <button
-                            className="nav-link btn"
+                            className="nav-link btn px-0"
                             id="v-pills-profile-tab"
                             data-bs-toggle="pill"
                             data-bs-target="#v-pills-profile"
@@ -123,7 +125,19 @@ const Dashboard = () => {
                             <i className="fal fa-plus"></i> All new Listing
                         </button>
                         <button
-                            className="nav-link btn"
+                            className="nav-link btn px-0"
+                            id="v-pills-products-tab"
+                            data-bs-toggle="pill"
+                            data-bs-target="#v-pills-products"
+                            type="button"
+                            role="tab"
+                            aria-controls="v-pills-products"
+                            aria-selected="false"
+                        >
+                            <i className="fas fa-cogs"></i> Manage Products
+                        </button>
+                        <button
+                            className="nav-link btn px-0"
                             id="v-pills-admin-tab"
                             data-bs-toggle="pill"
                             data-bs-target="#v-pills-admin"
@@ -166,7 +180,7 @@ const Dashboard = () => {
                                                             {order?.watchName}
                                                         </h5>
                                                         <p className="card-text">
-                                                            Booked By :{" "}
+                                                            Ordered By :{" "}
                                                             <b>{order?.name}</b>
                                                         </p>
                                                         <p className="card-text">
@@ -176,8 +190,18 @@ const Dashboard = () => {
                                                             </b>
                                                         </p>
                                                         <p className="card-text">
-                                                            Status :
-                                                            {order?.status}
+                                                            Ordered Item :{" "}
+                                                            <b>
+                                                                {
+                                                                    order?.watchname
+                                                                }
+                                                            </b>
+                                                        </p>
+                                                        <p className="card-text">
+                                                            Status :{" "}
+                                                            <b>
+                                                                {order?.status}
+                                                            </b>
                                                         </p>
                                                         <div className="buttons mt-3">
                                                             <button
@@ -316,6 +340,14 @@ const Dashboard = () => {
                                     </div>
                                 </form>
                             </div>
+                        </div>
+                        <div
+                            className="tab-pane fade event"
+                            id="v-pills-products"
+                            role="tabpanel"
+                            aria-labelledby="v-pills-admin-tab"
+                        >
+                            <ManageProducts />
                         </div>
                         <div
                             className="tab-pane fade event"

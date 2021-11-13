@@ -10,7 +10,7 @@ const Payment = () => {
     const history = useHistory();
     const onSubmit = (data) => {
         // console.log(data);
-        fetch("http://localhost:5000/payments", {
+        fetch("https://serene-shelf-88269.herokuapp.com/payments", {
             method: "POST",
             headers: {
                 "content-type": "application/json",
@@ -75,7 +75,7 @@ const Payment = () => {
                 />
             </form>
             <h5 className="text-center py-5">
-                ---------- Or Using Mobile Banking ----------
+                Or Using Mobile Banking
             </h5>
             <div className="pay-buttons text-center">
                 <button className="btn paypal m-1">
