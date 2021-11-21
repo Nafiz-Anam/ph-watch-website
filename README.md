@@ -6,10 +6,6 @@ Live website link here : [Live link](https://arloji-watches.web.app/)
 
 ## Features
 
-### Want to Check the site as an Admin?
-
--   Use Email: `admin@admin.com`
--   Use Pass: `123456`
 
 ![Admin Panel Screenshot](adminPanel.png)
 
