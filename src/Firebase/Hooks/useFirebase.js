@@ -137,14 +137,14 @@ const useFirebase = () => {
     };
     // checking admin
     useEffect(() => {
-        fetch(`https://serene-shelf-88269.herokuapp.com/users/${user.email}`)
+        fetch(`https://arloji-server.onrender.com/users/${user.email}`)
             .then((res) => res.json())
             .then((data) => setAdmin(data.admin));
     }, [user.email]);
     // save users to my database
     const saveUser = (email, displayName, method) => {
         const user = { email, displayName };
-        fetch("https://serene-shelf-88269.herokuapp.com/users", {
+        fetch("https://arloji-server.onrender.com/users", {
             method: method,
             headers: {
                 "content-type": "application/json",

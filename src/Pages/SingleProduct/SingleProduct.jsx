@@ -11,7 +11,7 @@ const SingleProduct = () => {
 
     useEffect(() => {
         setIsLoading(true);
-        fetch(`https://serene-shelf-88269.herokuapp.com/shop/${id}`)
+        fetch(`https://arloji-server.onrender.com/shop/${id}`)
             .then((res) => res.json())
             .then((data) => {
                 // console.log(data);

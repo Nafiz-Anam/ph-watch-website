@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 const ManageProducts = () => {
     const [allWatches, setAllWatches] = useState([]);
     useEffect(() => {
-        fetch("https://serene-shelf-88269.herokuapp.com/shop")
+        fetch("https://arloji-server.onrender.com/shop")
             .then((res) => res.json())
             .then((data) => {
                 setAllWatches(data);
@@ -13,7 +13,7 @@ const ManageProducts = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm("Are you sure, you want to delete?");
         if (proceed) {
-            fetch(`https://serene-shelf-88269.herokuapp.com/shop/${id}`, {
+            fetch(`https://arloji-server.onrender.com/shop/${id}`, {
                 method: "DELETE",
             })
                 .then((res) => res.json())

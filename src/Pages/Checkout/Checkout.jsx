@@ -12,7 +12,7 @@ const Checkout = () => {
     const history = useHistory();
     const onSubmit = (data) => {
         // console.log(data);
-        fetch("https://serene-shelf-88269.herokuapp.com/orders", {
+        fetch("https://arloji-server.onrender.com/orders", {
             method: "POST",
             headers: {
                 "content-type": "application/json",

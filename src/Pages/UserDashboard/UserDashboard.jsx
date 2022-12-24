@@ -10,7 +10,7 @@ const UserDashboard = () => {
     // fetching specific data  here
     const [allOrders, setAllOrders] = useState([]);
     useEffect(() => {
-        fetch("https://serene-shelf-88269.herokuapp.com/orders")
+        fetch("https://arloji-server.onrender.com/orders")
             .then((res) => res.json())
             .then((data) => {
                 const specificOrder = data.filter(
@@ -24,7 +24,7 @@ const UserDashboard = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm("Are you sure, you want to cancel?");
         if (proceed) {
-            fetch(`https://serene-shelf-88269.herokuapp.com/orders/${id}`, {
+            fetch(`https://arloji-server.onrender.com/orders/${id}`, {
                 method: "DELETE",
             })
                 .then((res) => res.json())

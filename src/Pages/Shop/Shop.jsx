@@ -6,7 +6,7 @@ const Shop = () => {
     // fetching data  here
     const [allWatches, setAllWatches] = useState([]);
     useEffect(() => {
-        fetch("https://serene-shelf-88269.herokuapp.com/shop")
+        fetch("https://arloji-server.onrender.com/shop")
             .then((res) => res.json())
             .then((data) => setAllWatches(data));
     }, []);

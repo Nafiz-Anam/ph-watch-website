@@ -6,13 +6,13 @@ import ReviewCard from "../../Components/ReviewCard/ReviewCard";
 const Home = () => {
     const [allWatches, setAllWatches] = useState([]);
     useEffect(() => {
-        fetch("https://serene-shelf-88269.herokuapp.com/shop")
+        fetch("https://arloji-server.onrender.com/shop")
             .then((res) => res.json())
             .then((data) => setAllWatches(data));
     }, []);
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
-        fetch("https://serene-shelf-88269.herokuapp.com/review")
+        fetch("https://arloji-server.onrender.com/review")
             .then((res) => res.json())
             .then((data) => {
                 setReviews(data);

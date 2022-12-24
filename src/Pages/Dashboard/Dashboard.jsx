@@ -9,7 +9,7 @@ const Dashboard = () => {
     const [allOrders, setAllOrders] = useState([]);
     const onSubmit = (data) => {
         console.log(data);
-        fetch("https://serene-shelf-88269.herokuapp.com/shop", {
+        fetch("https://arloji-server.onrender.com/shop", {
             method: "POST",
             headers: {
                 "content-type": "application/json",
@@ -28,7 +28,7 @@ const Dashboard = () => {
     // fetching data  here
     // const [allBookings, setAllBookings] = useState([]);
     useEffect(() => {
-        fetch("https://serene-shelf-88269.herokuapp.com/orders")
+        fetch("https://arloji-server.onrender.com/orders")
             .then((res) => res.json())
             .then((data) => {
                 setAllOrders(data);
@@ -39,7 +39,7 @@ const Dashboard = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm("Are you sure, you want to cancel?");
         if (proceed) {
-            fetch(`https://serene-shelf-88269.herokuapp.com/orders/${id}`, {
+            fetch(`https://arloji-server.onrender.com/orders/${id}`, {
                 method: "DELETE",
             })
                 .then((res) => res.json())
@@ -58,7 +58,7 @@ const Dashboard = () => {
     const [order, setOrder] = useState({});
     // update status
     const handleStatus = (id) => {
-        fetch(`https://serene-shelf-88269.herokuapp.com/orders/${id}`)
+        fetch(`https://arloji-server.onrender.com/orders/${id}`)
             .then((res) => res.json())
             .then((data) => {
                 // console.log(data);
@@ -67,7 +67,7 @@ const Dashboard = () => {
         const updatedStatus = { ...order };
         updatedStatus.status = "Shipped";
         setOrder(updatedStatus);
-        fetch(`https://serene-shelf-88269.herokuapp.com/orders/${id}`, {
+        fetch(`https://arloji-server.onrender.com/orders/${id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json",
@@ -78,7 +78,7 @@ const Dashboard = () => {
             .then((data) => {
                 if (data.modifiedCount > 0) {
                     alert("Shipped Successfully.");
-                    fetch("https://serene-shelf-88269.herokuapp.com/orders")
+                    fetch("https://arloji-server.onrender.com/orders")
                         .then((res) => res.json())
                         .then((data) => {
                             setAllOrders(data);

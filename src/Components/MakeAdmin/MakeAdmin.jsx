@@ -5,7 +5,7 @@ const MakeAdmin = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = (data) => {
         console.log(data);
-        fetch("https://serene-shelf-88269.herokuapp.com/users/admin", {
+        fetch("https://arloji-server.onrender.com/users/admin", {
             method: "PUT",
             headers: {
                 "content-type": "application/json",

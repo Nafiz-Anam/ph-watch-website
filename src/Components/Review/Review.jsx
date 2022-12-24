@@ -13,7 +13,7 @@ const Review = () => {
     const { user } = useAuth();
     const onSubmit = (data) => {
         // console.log(data);
-        fetch("https://serene-shelf-88269.herokuapp.com/review", {
+        fetch("https://arloji-server.onrender.com/review", {
             method: "POST",
             headers: {
                 "content-type": "application/json",
